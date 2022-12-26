@@ -1,7 +1,7 @@
 import React from "react";
-import facebook from "../../assets/facebook.svg";
-import twitter from "../../assets/twitter.svg";
-import instagram from "../../assets/instagram.svg";
+import facebook from "assets/facebook.svg";
+import twitter from "assets/twitter.svg";
+import instagram from "assets/instagram.svg";
 import styles from "./Footer.module.scss";
 
 export default function Footer() {

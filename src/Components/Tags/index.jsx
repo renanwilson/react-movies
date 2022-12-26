@@ -1,5 +1,7 @@
 import styles from "./Tags.module.scss";
-import Photos from "../Gallery/Photos.json";
+
+import { ListPhotos } from "../Gallery/ListPhotos";
+
 export function Tags({ tags, filterPhotos, setItems }) {
   return (
     <div className={styles.tags}>
@@ -10,7 +12,7 @@ export function Tags({ tags, filterPhotos, setItems }) {
             {tag}
           </li>
         ))}
-        <li onClick={() => setItems(Photos)}>Todos</li>
+        <li onClick={() => setItems(ListPhotos)}>Todos</li>
       </ul>
     </div>
   );

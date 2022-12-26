@@ -2,14 +2,14 @@ import { useState } from "react";
 import { Tags } from "../Tags";
 import { Cards } from "./Cards";
 import styles from "./Gallery.module.scss";
-import Photos from "./Photos.json";
+import { ListPhotos } from "./ListPhotos";
 
 export function Gallery() {
-  const [items, setItems] = useState(Photos);
-  const tags = [...new Set(Photos.map((photos) => photos.tag))];
+  const [items, setItems] = useState(ListPhotos);
+  const tags = [...new Set(ListPhotos.map((photos) => photos.tag))];
 
   const filterPhotos = (tag) => {
-    const newPhotos = Photos.filter((photo) => {
+    const newPhotos = ListPhotos.filter((photo) => {
       return photo.tag === tag;
     });
     setItems(newPhotos);
