@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./assets/asset/GandhiSans-Bold.otf";
-import "./assets/asset/GandhiSans-Regular.otf";
+import "./assets/fonts/GandhiSans-Bold.otf";
+import "./assets/fonts/GandhiSans-Regular.otf";
 
 import { App } from "./App";
 
