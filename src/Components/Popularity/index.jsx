@@ -5,9 +5,9 @@ import styles from "./Popularity.module.scss";
 
 export function Popularity() {
   return (
-    <aside className={styles.populares}>
+    <aside className={styles.popularity}>
       <h2>Populares</h2>
-      <ul className={styles.populares__imagens}>
+      <ul className={styles.popularity__images}>
         {listPhotosPopularity.map((photo) => {
           return (
             <li key={photo.id}>

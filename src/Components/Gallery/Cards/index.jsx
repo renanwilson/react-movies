@@ -9,10 +9,10 @@ export function Cards({ Photos, styles }) {
     <>
       {Photos.map(({ poster_path, title, id, vote_average }) => {
         return (
-          <li className={styles.galeria__card}>
+          <li className={styles.gallery__card}>
             <img
               key={id}
-              className={styles.galeria__imagem}
+              className={styles.gallery__image}
               src={`${urlImages}/${poster_path}`}
               alt={title}
             />

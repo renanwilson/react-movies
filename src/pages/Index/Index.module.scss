@@ -8,7 +8,7 @@ main {
   justify-content: space-between;
   margin-top: 2rem;
 
-  &__imagem {
+  &__image {
     width: 88%;
     img {
       width: 100%;
@@ -30,7 +30,7 @@ main {
     }
   }
 }
-.galeria {
+.gallery {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;

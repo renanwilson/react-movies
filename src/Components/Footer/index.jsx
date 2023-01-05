@@ -6,8 +6,8 @@ import styles from "./Footer.module.scss";
 
 export default function Footer() {
   return (
-    <footer className={styles.rodape}>
-      <div className={styles.rodape__icones}>
+    <footer className={styles.footer}>
+      <div className={styles.footer__icons}>
         <a
           href="https://www.facebook.com/AluraCursosOnline/"
           target="_blank"

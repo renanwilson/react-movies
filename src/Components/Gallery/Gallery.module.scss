@@ -1,9 +1,9 @@
 @import "../../styles/variables";
 
-.galeria {
-  font-family: $fonte-normal;
+.gallery {
+  font-family: $font-normal;
   h2 {
-    color: $roxo;
+    color: $purple;
     font-size: 24px;
   }
   .card__circular {
@@ -40,7 +40,7 @@
       }
     }
   }
-  &__imagem {
+  &__image {
     height: 17rem;
     margin: 20px;
   }

@@ -23,12 +23,12 @@ export function Index() {
         <section className={styles.principal}>
           <Menu />
 
-          <div className={styles.principal__imagem}>
+          <div className={styles.principal__image}>
             <h1>A galeria mais completa do espaco</h1>
             <img src={banner} alt="A imagem da terra vista do espaco" />
           </div>
         </section>
-        <div className={styles.galeria}>
+        <div className={styles.gallery}>
           <Gallery data={data} />
         </div>
       </main>

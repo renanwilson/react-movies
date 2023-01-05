@@ -4,8 +4,8 @@ button {
   margin-top: 1.5rem;
   background: transparent;
   border: none;
-  color: $cor-do-texto;
-  font-family: $fonte-normal;
+  color: $text-color;
+  font-family: $font-normal;
   font-size: 16px;
   width: 100%;
   padding: 12px 16px;
@@ -15,8 +15,8 @@ button {
 
   &:hover {
     border-radius: 10px;
-    background: linear-gradient(to right, $rosa, $roxo) border-box;
-    color: $azul-escuro;
+    background: linear-gradient(to right, $pink, $purple) border-box;
+    color: $dark-blue;
     transition: 0.1s;
   }
 
@@ -27,13 +27,13 @@ button {
     border-radius: 10px;
     z-index: -1;
     border: 2px solid transparent;
-    background: linear-gradient(to right, $rosa, $azul-claro) border-box;
+    background: linear-gradient(to right, $pink, $light-blue) border-box;
     -webkit-mask: linear-gradient(#fff 0 0) padding-box,
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    background: linear-gradient(to right, $rosa, $roxo) border-box;
-    color: $azul-escuro;
+    background: linear-gradient(to right, $pink, $purple) border-box;
+    color: $dark-blue;
     transition: 0.1s;
   }
 }
