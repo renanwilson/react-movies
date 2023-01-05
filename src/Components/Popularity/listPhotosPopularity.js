@@ -1,8 +1,8 @@
-import foto1 from "assets/images/populares/foto-1.png";
-import foto2 from "assets/images/populares/foto-2.png";
-import foto3 from "assets/images/populares/foto-3.png";
-import foto4 from "assets/images/populares/foto-4.png";
-import foto5 from "assets/images/populares/foto-5.png";
+import foto1 from "assets/images/popularity/foto-1.png";
+import foto2 from "assets/images/popularity/foto-2.png";
+import foto3 from "assets/images/popularity/foto-3.png";
+import foto4 from "assets/images/popularity/foto-4.png";
+import foto5 from "assets/images/popularity/foto-5.png";
 
 export const listPhotosPopularity = [
   {
