@@ -1,20 +1,27 @@
-import open from "./open.png";
-import favorito from "./favorito.png";
+import React from "react";
+import { CircularProgressbar } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 
 export function Cards({ Photos, styles }) {
+  const urlImages = "https://image.tmdb.org/t/p/w300";
+
   return (
     <>
-      {Photos.map(({ id, imagem, creditos, tag, titulo }) => {
+      {Photos.map(({ poster_path, title, id, vote_average }) => {
         return (
-          <li key={id} className={styles.galeria__card}>
-            <img className={styles.galeria__imagem} src={imagem} alt={titulo} />
-            <p className={styles.galeria__descricao}>{titulo}</p>
-            <div>
-              <p>{creditos}</p>
-              <span>
-                <img src={open} alt="Icone coracao curtir" />
-                <img src={favorito} alt="Icone de abrir modal" />
-              </span>
+          <li className={styles.galeria__card}>
+            <img
+              key={id}
+              className={styles.galeria__imagem}
+              src={`${urlImages}/${poster_path}`}
+              alt={title}
+            />
+            <div className={styles.card__circular}>
+              <CircularProgressbar
+                value={vote_average}
+                text={vote_average}
+                maxValue={10}
+              />
             </div>
           </li>
         );
