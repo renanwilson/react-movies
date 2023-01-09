@@ -1,26 +1,23 @@
+import { CircularProgress } from "Components/CircularProgress";
 import React from "react";
-import { CircularProgressbar } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
 
 export function Cards({ Photos, styles }) {
   const urlImages = "https://image.tmdb.org/t/p/w300";
 
   return (
     <>
-      {Photos.map(({ poster_path, title, id, vote_average }) => {
+      {Photos.map(({ poster_path, title, vote_average, id }) => {
         return (
-          <li className={styles.gallery__card}>
+          <li className={styles.gallery__card} key={id}>
             <img
-              key={id}
               className={styles.gallery__image}
               src={`${urlImages}/${poster_path}`}
               alt={title}
             />
             <div className={styles.card__circular}>
-              <CircularProgressbar
+              <CircularProgress
+                text={`${vote_average} %`}
                 value={vote_average}
-                text={vote_average}
-                maxValue={10}
               />
             </div>
           </li>

@@ -29,19 +29,18 @@
     flex-direction: column;
 
     &:hover {
-      // -moz-transform: scale(1.1);
-      // -webkit-transform: scale(1.1);
-      // transform: scale(1.025);
-      // transition: 0.3s;
-      // cursor: pointer;
       .card__circular {
         transition: 0.3s;
+        position: absolute;
         display: inline;
+        z-index: 1;
+        padding-bottom: 18rem;
       }
     }
   }
   &__image {
     height: 17rem;
+    position: relative;
     margin: 20px;
   }
 }
