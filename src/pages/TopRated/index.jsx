@@ -1,10 +1,11 @@
 import { Header } from "Components/Header/Index";
 import { Menu } from "Components/Menu/Index";
 import banner from "assets/banner.png";
-import styles from "./Index.module.scss";
-import { GalleryWithNowPlaying } from "Components/Gallery/GalleryNowPlaying";
+import styles from "./TopRated.module.scss";
 
-export function Index() {
+import { GalleryWithTopRated } from "Components/Gallery/GalleryTopRated";
+
+export function TopRated() {
   return (
     <>
       <Header />
@@ -18,7 +19,7 @@ export function Index() {
           </div>
         </section>
         <div className={styles.gallery}>
-          <GalleryWithNowPlaying />
+          <GalleryWithTopRated />
         </div>
       </main>
     </>

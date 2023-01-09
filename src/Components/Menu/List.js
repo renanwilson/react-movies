@@ -8,10 +8,12 @@ export const List = [
   {
     title: "Inicio",
     img: home,
+    href: "/",
   },
   {
-    title: "Mais curtidas",
+    title: "Melhores Avaliados",
     img: maisCurtidas,
+    href: "/top",
   },
   {
     title: "Mais vistas",

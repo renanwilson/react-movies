@@ -12,12 +12,10 @@ export const MostPopularityContextProvider = ({ children }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    api.get("movie/now_playing").then((resp) => {
+    api.get("movie/popular").then((resp) => {
       setData(resp.data.results);
     });
   }, [setData]);
-
-  console.log(data);
 
   return (
     <MostPopularityContext.Provider value={{ data, setData }}>

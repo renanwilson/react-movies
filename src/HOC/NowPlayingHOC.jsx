@@ -1,4 +1,4 @@
-import { NowPlayingContextProvider } from "contexts/NowPlaying";
+import { NowPlayingContextProvider } from "contexts/NowPlayingContext";
 
 export const NowPlayingHOC = (Children) => {
   return (
