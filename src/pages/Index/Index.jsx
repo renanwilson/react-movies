@@ -2,20 +2,9 @@ import { Header } from "Components/Header/Index";
 import { Menu } from "Components/Menu/Index";
 import banner from "assets/banner.png";
 import styles from "./Index.module.scss";
-import { Gallery } from "../../Components/Gallery";
-import { Popularity } from "Components/Popularity";
-import { useEffect, useState } from "react";
-import { api } from "services/api";
-
+import { GalleriWithMostPopularity } from "../../Components/Gallery";
+    
 export function Index() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    api.get("movie/now_playing").then((resp) => {
-      setData(resp.data.results);
-    });
-  }, [setData]);
-
   return (
     <>
       <Header />
@@ -29,7 +18,7 @@ export function Index() {
           </div>
         </section>
         <div className={styles.gallery}>
-          <Gallery data={data} />
+          <GalleriWithMostPopularity />
         </div>
       </main>
     </>
