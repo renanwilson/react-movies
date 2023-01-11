@@ -16,8 +16,9 @@ export const List = [
     href: "/top",
   },
   {
-    title: "Mais vistas",
+    title: "Mais populares",
     img: maisVistas,
+    href: "/popularity",
   },
   {
     title: "Novas",

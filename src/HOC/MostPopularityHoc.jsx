@@ -1,9 +1,9 @@
-import { NowPlayingContextProvider } from "contexts/NowPlaying";
+import { MostPopularityContextProvider } from "contexts/MostPopularityContext";
 
-export const NowPlayingHOC = (Children) => {
+export const MostPopularityHOC = (Children) => {
   return (
-    <NowPlayingContextProvider>
+    <MostPopularityContextProvider>
       <Children />
-    </NowPlayingContextProvider>
+    </MostPopularityContextProvider>
   );
 };
