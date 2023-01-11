@@ -16,7 +16,6 @@ export const TopRatedContextProvider = ({ children }) => {
       setData(resp.data.results);
     });
   }, [setData]);
-  console.log(data);
 
   return (
     <TopRatedContext.Provider value={{ data, setData }}>
