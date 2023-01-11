@@ -21,8 +21,9 @@ export const List = [
     href: "/popularity",
   },
   {
-    title: "Novas",
+    title: "Popular na tv",
     img: novas,
+    href: "/tv_popular",
   },
   {
     title: "Surpreenda-me",
