@@ -1,4 +1,4 @@
-import { ForRotas } from "Components/routes/Routes";
+import { ForRotas } from "routes/Routes";
 
 import "./styles/GlobalStyles.scss";
 
