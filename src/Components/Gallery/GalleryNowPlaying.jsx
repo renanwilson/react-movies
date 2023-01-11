@@ -6,7 +6,7 @@ import { NowPlayingHOC } from "../../HOC/NowPlayingHOC";
 function Gallery() {
   const { data } = useNowPlayingContext();
 
-  return <GalleryContainer data={data} title="Todos estão assistindo agora" />;
+  return <GalleryContainer data={data} title="Em alta" />;
 }
 
 export const GalleryWithNowPlaying = () => NowPlayingHOC(Gallery);
