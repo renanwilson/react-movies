@@ -26,7 +26,8 @@ export const List = [
     href: "/tv_popular",
   },
   {
-    title: "Surpreenda-me",
+    title: "Melhores avaliados na TV",
     img: surpreendaMe,
+    href: "/tv_toprated",
   },
 ];
