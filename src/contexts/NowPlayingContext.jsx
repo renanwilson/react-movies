@@ -12,7 +12,7 @@ export const NowPlayingContextProvider = ({ children }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    api.get("movie/now_playing").then((resp) => {
+    api.get("trending/all/week").then((resp) => {
       setData(resp.data.results);
     });
   }, [setData]);

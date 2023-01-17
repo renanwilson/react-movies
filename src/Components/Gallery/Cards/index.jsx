@@ -16,7 +16,7 @@ export function Cards({ Photos, styles }) {
             />
             <div className={styles.card__circular}>
               <CircularProgress
-                text={`${vote_average} %`}
+                text={`${vote_average?.toFixed(1)} %`}
                 value={vote_average}
               />
             </div>

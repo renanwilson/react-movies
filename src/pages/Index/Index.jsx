@@ -8,7 +8,7 @@ import { AiFillStar } from "react-icons/ai";
 import { getImageFromApi } from "utils/getImageFromApi";
 
 export function Index() {
-  const { data } = getImageFromApi("movie/popular");
+  const { data } = getImageFromApi("trending/all/week");
 
   return (
     <>
@@ -22,9 +22,9 @@ export function Index() {
               src={`${Urls.IMAGE_FULL_WIDTH}/${data.backdrop_path}`}
               alt="A imagem da terra vista do espaco"
             />
-            <h1>{data.title}</h1>
+            <h1>{data.title ? data.title : data.name}</h1>
             <h2>
-              <AiFillStar color="#D4AF37" /> {data.vote_average}
+              <AiFillStar color="#D4AF37" /> {data.vote_average?.toFixed(1)}
             </h2>
           </div>
         </section>
