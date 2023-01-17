@@ -1,21 +1,14 @@
 import { Header } from "Components/Header/Index";
 import { Menu } from "Components/Menu/Index";
 
-import styles from "./Index.module.scss";
+import styles from "styles/PageStyles.module.scss";
+import { Urls } from "constants/Urls";
 import { GalleryWithNowPlaying } from "Components/Gallery/GalleryNowPlaying";
-import { api } from "services/api";
-import { useEffect, useState } from "react";
 import { AiFillStar } from "react-icons/ai";
+import { getImageFromApi } from "utils/getImageFromApi";
 
 export function Index() {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    api.get("movie/popular").then((resp) => {
-      setData(resp.data.results[1]);
-    });
-  }, [setData]);
-
-  const urlImages = "https://image.tmdb.org/t/p/t/p/w1920_and_h800_multi_faces";
+  const { data } = getImageFromApi("movie/popular");
 
   return (
     <>
@@ -26,7 +19,7 @@ export function Index() {
 
           <div className={styles.principal__image}>
             <img
-              src={`${urlImages}/${data.backdrop_path}`}
+              src={`${Urls.IMAGE_FULL_WIDTH}/${data.backdrop_path}`}
               alt="A imagem da terra vista do espaco"
             />
             <h1>{data.title}</h1>
