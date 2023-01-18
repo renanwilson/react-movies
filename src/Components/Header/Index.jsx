@@ -4,25 +4,12 @@ import logo from "./assets/logo.png";
 import search from "./assets/search.png";
 import styles from "./Header.module.scss";
 import { api } from "services/api";
+import { useGetQuery } from "utils/getQuery";
 
 export function Header() {
-  const { setQuery, query, setData } = useSearchContext();
-  const navigate = useNavigate();
+  const { setQuery, query } = useSearchContext();
+  const { getQuery, useGetQueryButton } = useGetQuery();
 
-  const useGetQuery = (event) => {
-    if (event.key === "Enter") {
-      api.get("search/movie", { params: { query: query } }).then((resp) => {
-        setData(resp.data.results);
-      });
-      navigate("/search");
-    }
-  };
-  const useGetQueryButton = () => {
-    api.get("search/movie", { params: { query: query } }).then((resp) => {
-      setData(resp.data.results);
-    });
-    navigate("/search");
-  };
   return (
     <>
       <header className={styles.header}>
@@ -34,7 +21,7 @@ export function Header() {
             className={styles.header__input}
             onChange={(e) => setQuery(e.target.value)}
             value={query}
-            onKeyPress={useGetQuery}
+            onKeyPress={getQuery}
           />
           <img
             src={search}

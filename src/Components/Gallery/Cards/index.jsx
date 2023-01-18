@@ -7,7 +7,7 @@ export function Cards({ Photos, styles }) {
   return (
     <>
       {Photos.map(({ poster_path, title, vote_average, id }) => {
-        return (
+        return poster_path ? (
           <li className={styles.gallery__card} key={id}>
             <img
               className={styles.gallery__image}
@@ -21,7 +21,7 @@ export function Cards({ Photos, styles }) {
               />
             </div>
           </li>
-        );
+        ) : null;
       })}
     </>
   );
