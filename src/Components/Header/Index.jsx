@@ -1,9 +1,8 @@
 import { useSearchContext } from "contexts/SearchContext";
-import { useNavigate } from "react-router-dom";
-import logo from "./assets/logo.png";
+
 import search from "./assets/search.png";
 import styles from "./Header.module.scss";
-import { api } from "services/api";
+
 import { useGetQuery } from "utils/getQuery";
 
 export function Header() {
@@ -13,7 +12,10 @@ export function Header() {
   return (
     <>
       <header className={styles.header}>
-        <img src={logo} alt="logo" />
+        <img
+          src="https://fontmeme.com/permalink/230131/f16ef94af37ba1715639ec01e294036b.png"
+          alt="logo"
+        />
         <div className={styles.header__container}>
           <input
             type="text"

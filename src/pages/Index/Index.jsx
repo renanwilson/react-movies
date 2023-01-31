@@ -22,6 +22,7 @@ export function Index() {
               src={`${Urls.IMAGE_FULL_WIDTH}/${data.backdrop_path}`}
               alt="A imagem da terra vista do espaco"
             />
+
             <h1>{data.title ? data.title : data.name}</h1>
             <h2>
               <AiFillStar color="#D4AF37" /> {data.vote_average?.toFixed(1)}
