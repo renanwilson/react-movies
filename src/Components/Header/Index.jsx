@@ -1,6 +1,6 @@
 import { useSearchContext } from "contexts/SearchContext";
 
-import search from "./assets/search.png";
+import search from "assets/search.png";
 import styles from "./Header.module.scss";
 
 import { useGetQuery } from "utils/getQuery";
