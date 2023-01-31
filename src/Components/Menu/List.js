@@ -8,21 +8,26 @@ export const List = [
   {
     title: "Inicio",
     img: home,
+    href: "/",
   },
   {
-    title: "Mais curtidas",
+    title: "Melhores Avaliados",
     img: maisCurtidas,
+    href: "/top",
   },
   {
-    title: "Mais vistas",
+    title: "Mais populares",
     img: maisVistas,
+    href: "/popularity",
   },
   {
-    title: "Novas",
+    title: "Popular na tv",
     img: novas,
+    href: "/tv_popular",
   },
   {
-    title: "Surpreenda-me",
+    title: "Melhores avaliados na TV",
     img: surpreendaMe,
+    href: "/tv_toprated",
   },
 ];

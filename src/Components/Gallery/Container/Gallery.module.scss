@@ -1,0 +1,56 @@
+@import "../../../styles/variables";
+
+.gallery {
+  font-family: $font-normal;
+  h2 {
+    color: $purple;
+    font-size: 24px;
+  }
+  .card__circular {
+    max-width: 3rem;
+    display: none;
+  }
+  .open {
+    z-index: 1;
+
+    img {
+      position: absolute;
+      right: 2rem;
+      top: 16.5rem;
+    }
+  }
+  &__cards {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__card {
+    margin-right: 1rem;
+    margin-bottom: 1.35rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    &:hover {
+      .card__circular {
+        transition: 0.3s;
+        position: absolute;
+        display: inline;
+        z-index: 1;
+        padding-bottom: 18rem;
+      }
+    }
+  }
+  &__image {
+    height: 17rem;
+    width: 11rem;
+    position: relative;
+    margin: 20px;
+  }
+}

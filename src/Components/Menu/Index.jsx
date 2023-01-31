@@ -10,7 +10,7 @@ export function Menu() {
           return (
             <li key={list.title} className={styles.menu__item}>
               <img src={list.img} alt={list.title} />
-              <a href="/">{list.title}</a>
+              <a href={list.href}>{list.title}</a>
             </li>
           );
         })}

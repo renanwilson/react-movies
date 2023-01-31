@@ -1,23 +1,33 @@
-import open from "./open.png";
-import favorito from "./favorito.png";
+import { CircularProgress } from "Components/CircularProgress";
+import React from "react";
+import open from "assets/open.png";
 
 export function Cards({ Photos, styles }) {
+  const urlImages = "https://image.tmdb.org/t/p/w300";
+
   return (
     <>
-      {Photos.map(({ id, imagem, creditos, tag, titulo }) => {
-        return (
-          <li key={id} className={styles.galeria__card}>
-            <img className={styles.galeria__imagem} src={imagem} alt={titulo} />
-            <p className={styles.galeria__descricao}>{titulo}</p>
-            <div>
-              <p>{creditos}</p>
-              <span>
-                <img src={open} alt="Icone coracao curtir" />
-                <img src={favorito} alt="Icone de abrir modal" />
-              </span>
-            </div>
-          </li>
-        );
+      {Photos.map(({ poster_path, title, vote_average, id }) => {
+        return poster_path ? (
+          <>
+            <li className={styles.gallery__card} key={id}>
+              <img
+                className={styles.gallery__image}
+                src={`${urlImages}/${poster_path}`}
+                alt={title}
+              />
+              <div className={styles.card__circular}>
+                <CircularProgress
+                  text={`${vote_average?.toFixed(1)} %`}
+                  value={vote_average}
+                />
+              </div>
+              <div className={styles.open}>
+                <img src={open} alt="abrir" />
+              </div>
+            </li>
+          </>
+        ) : null;
       })}
     </>
   );
