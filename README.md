@@ -1,7 +1,7 @@
-# Alura Films 🎞️
+# Alura Movies 🎞️
 
 ## 🖥️ See this project in te web 
-- [React Weather!](https://alura-space-brown.vercel.app/popularity)
+- [Alura Movies!](https://alura-space-brown.vercel.app/popularity)
 
 ## 🚀 Technologies
 
@@ -12,7 +12,7 @@ This project is using:
 
 ## 💻 About this project
 
-The Alura films started with an Alura application (alura-space), and I improved the movie db api. 🤪
+The Alura Movies started with an Alura application (alura-space), and I improved the movie db api. 🤪
 
 ## 📜 Scripts
 
